@@ -33,7 +33,7 @@ class _MovieScrollDetailState extends State<MovieScrollDetail> {
                         fit: BoxFit.cover,
                         image: const NetworkImage(
                             'https://flxt.tmsimg.com/assets/p17699282_b_v13_ab.jpg'),
-                        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstATop),
+                        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.6), BlendMode.dstATop),
                       ),
                     ),
                   ),
