@@ -16,7 +16,7 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: MediaQuery.of(context).size.height,
       width: MediaQuery.of(context).size.width,
       child: SingleChildScrollView(
@@ -106,7 +106,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
               Align(
                 child: Container(
-                  margin: EdgeInsets.only(left: 45, right: 45, top: 490),
+                  margin: const EdgeInsets.only(left: 45, right: 45, top: 490),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     crossAxisAlignment: CrossAxisAlignment.end,
@@ -130,7 +130,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => MovieScrollDetail()));
+                        builder: (context) => const MovieScrollDetail()));
               },
               child: MovieScroll(
                   title: 'TV Shows', movies: getWatchItAgainData()),

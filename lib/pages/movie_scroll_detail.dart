@@ -3,8 +3,6 @@ import 'package:netflix_clone/widgets/movie_details_widget.dart';
 
 import '../widgets/iconwidget.dart';
 
-
-
 class MovieScrollDetail extends StatefulWidget {
   const MovieScrollDetail({Key? key}) : super(key: key);
 
@@ -18,8 +16,6 @@ class _MovieScrollDetailState extends State<MovieScrollDetail> {
 
   @override
   Widget build(BuildContext context) {
-
-
     return SafeArea(
       child: Scaffold(
         backgroundColor: Colors.black,
@@ -32,16 +28,19 @@ class _MovieScrollDetailState extends State<MovieScrollDetail> {
                 Stack(children: [
                   Container(
                     height: 250,
-                    decoration: const BoxDecoration(
-                        image: DecorationImage(
-                          fit: BoxFit.cover,
-                          image: NetworkImage(
-                              'https://flxt.tmsimg.com/assets/p17699282_b_v13_ab.jpg'),
-                        )),
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: const NetworkImage(
+                            'https://flxt.tmsimg.com/assets/p17699282_b_v13_ab.jpg'),
+                        colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.5), BlendMode.dstATop),
+                      ),
+                    ),
                   ),
                   Align(
                     child: Container(
-                      margin: const EdgeInsets.only(top: 10, left: 10, right: 10),
+                      margin:
+                          const EdgeInsets.only(top: 10, left: 10, right: 10),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -49,9 +48,8 @@ class _MovieScrollDetailState extends State<MovieScrollDetail> {
                             children: [
                               Container(
                                 decoration: BoxDecoration(
-                                  color:Colors.white10,
-                                  borderRadius: BorderRadius.circular(30)
-                                ),
+                                    color: Colors.white10,
+                                    borderRadius: BorderRadius.circular(30)),
                                 child: IconWidget(
                                   padding: 5,
                                   icon: Icons.cast_rounded,
@@ -62,11 +60,10 @@ class _MovieScrollDetailState extends State<MovieScrollDetail> {
                               Container(
                                 margin: EdgeInsets.all(3),
                                 decoration: BoxDecoration(
-                                    color:Colors.white10,
-                                    borderRadius: BorderRadius.circular(30)
-                                ),
+                                    color: Colors.white10,
+                                    borderRadius: BorderRadius.circular(30)),
                                 child: GestureDetector(
-                                  onTap: (){
+                                  onTap: () {
                                     Navigator.pop(context);
                                   },
                                   child: IconWidget(
@@ -83,7 +80,6 @@ class _MovieScrollDetailState extends State<MovieScrollDetail> {
                       ),
                     ),
                   ),
-
                   Align(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -93,19 +89,25 @@ class _MovieScrollDetailState extends State<MovieScrollDetail> {
                             borderRadius: BorderRadius.circular(30),
                             color: Colors.black.withOpacity(0.5),
                           ),
-                          margin: EdgeInsets.only(left: 20, right: 20, top: 110),
+                          margin:
+                              EdgeInsets.only(left: 20, right: 20, top: 110),
                           child: GestureDetector(
-                                onTap: (){
-                                  setState(() {
-                                    isPlaying=!isPlaying;
-                                  });
-                                },
-                              child: IconWidget(icon: isPlaying?Icons.play_arrow:Icons.pause, size: 40, padding: 8, color: Colors.white,)),
+                              onTap: () {
+                                setState(() {
+                                  isPlaying = !isPlaying;
+                                });
+                              },
+                              child: IconWidget(
+                                icon:
+                                    isPlaying ? Icons.play_arrow : Icons.pause,
+                                size: 40,
+                                padding: 8,
+                                color: Colors.white,
+                              )),
                         ),
                       ],
                     ),
                   ),
-
                   Align(
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
@@ -115,14 +117,22 @@ class _MovieScrollDetailState extends State<MovieScrollDetail> {
                             borderRadius: BorderRadius.circular(30),
                             color: Colors.black.withOpacity(0.5),
                           ),
-                          margin: EdgeInsets.only(left: 20, right: 20, top: 200),
+                          margin:
+                              EdgeInsets.only(left: 20, right: 20, top: 200),
                           child: GestureDetector(
-                              onTap: (){
+                              onTap: () {
                                 setState(() {
-                                  volume =!volume;
+                                  volume = !volume;
                                 });
                               },
-                              child: IconWidget(icon: volume? Icons.volume_up_rounded:Icons.volume_off, size: 20, padding: 8, color: Colors.white,)),
+                              child: IconWidget(
+                                icon: volume
+                                    ? Icons.volume_up_rounded
+                                    : Icons.volume_off,
+                                size: 20,
+                                padding: 8,
+                                color: Colors.white,
+                              )),
                         ),
                       ],
                     ),
