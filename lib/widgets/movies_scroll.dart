@@ -15,7 +15,7 @@ class MovieScroll extends StatelessWidget {
         children: [
       Padding(
         padding: const EdgeInsets.only(top: 10, left: 3, right: 3, bottom: 5),
-        child: HeavyText(text: title,),
+        child: HeavyText(text: title, fontSize: 17,),
       ),
       SizedBox(
         height: 150,

@@ -24,6 +24,7 @@ class MovieDetailsWidget extends StatelessWidget {
                 text: 'SERIES',
                 letterSpacing: 3,
                 color: Colors.white,
+                fontSize: 9,
               ),
               SizedBox(
                 height: 7,
@@ -39,6 +40,7 @@ class MovieDetailsWidget extends StatelessWidget {
               DescriptionText(
                 text: '99% match',
                 color: Colors.green,
+                fontSize: 12,
               ),
               SizedBox(
                 width: 5,
@@ -57,10 +59,11 @@ class MovieDetailsWidget extends StatelessWidget {
               DescriptionText(
                 text: '3 Seasons',
                 color: Colors.white,
+                fontSize: 12,
               ),
             ],
           ),
-          HeavyText(text: '#6 in TV Shows Today'),
+          HeavyText(text: '#6 in TV Shows Today', fontSize: 17,),
           SizedBox(
             height: 10,
           ),
@@ -84,7 +87,7 @@ class MovieDetailsWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconWidget(icon: Icons.download, size: 25, padding: 1, color: Colors.white,),
-                DescriptionText(text: 'Download S2:E10', color: Colors.white, fontWeight: FontWeight.bold,)
+                DescriptionText(text: 'Download S2:E10', color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14,)
               ],
             ),
             decoration: BoxDecoration(

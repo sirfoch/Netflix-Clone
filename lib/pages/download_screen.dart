@@ -28,7 +28,7 @@ class _DownloadScreenState extends State<DownloadScreen> {
             children: [
               Row(
                 children: [
-                HeavyText(text: 'Downloads')
+                HeavyText(text: 'Downloads', fontSize: 17,)
                 ],
               ),
               Row(
@@ -65,7 +65,7 @@ class _DownloadScreenState extends State<DownloadScreen> {
             ],
           ),
           SizedBox(height: 30,),
-          HeavyText(text: 'Introducing Downloads for you'),
+          HeavyText(text: 'Introducing Downloads for you', fontSize: 17,),
           const SizedBox(height: 10,),
           Container(padding: EdgeInsets.only(left: 50, right: 50, top: 5),child: SmallText(text: 'We\'ll download a personalized selection of movies and shows for you, so there\'s always something to watch on your device.', textAlign: TextAlign.center,)),
           SizedBox(height: 10,),

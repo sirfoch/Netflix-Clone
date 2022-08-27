@@ -14,7 +14,7 @@ class _NewAndHotScreenState extends State<NewAndHotScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(child: HeavyText(text: 'New and Hot')),
+      child: Center(child: HeavyText(text: 'New and Hot', fontSize: 17,)),
     );
   }
 }

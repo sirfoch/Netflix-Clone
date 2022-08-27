@@ -22,13 +22,6 @@ class _NetflixState extends State<Netflix> {
     return const MaterialApp(
       debugShowCheckedModeBanner: false,
       home: UsersPage(),
-      // initialRoute: MoviesPage.id,
-      // routes: {
-      //   MoviesPage.id: (context) => const MoviesPage(),
-      //   NewAndHotScreen.id: (context) => const NewAndHotScreen(),
-      //   SearchScreen.id: (context) => const SearchScreen(),
-      //   DownloadScreen.id: (context) => const DownloadScreen(),
-      // },
     );
   }
 }

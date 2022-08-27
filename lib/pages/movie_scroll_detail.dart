@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:netflix_clone/widgets/movie_details_widget.dart';
+import 'package:netflix_clone/widgets/textWidget.dart';
 
+import '../widgets/expandable_text_widget.dart';
 import '../widgets/iconwidget.dart';
 
 class MovieScrollDetail extends StatefulWidget {
@@ -30,8 +32,7 @@ class _MovieScrollDetailState extends State<MovieScrollDetail> {
                     height: 250,
                     decoration: BoxDecoration(
                       image: DecorationImage(
-                        fit: BoxFit.cover,
-                        image: const NetworkImage(
+                        fit: BoxFit.cover, image: const NetworkImage(
                             'https://flxt.tmsimg.com/assets/p17699282_b_v13_ab.jpg'),
                         colorFilter: ColorFilter.mode(Colors.black.withOpacity(0.6), BlendMode.dstATop),
                       ),
@@ -139,6 +140,8 @@ class _MovieScrollDetailState extends State<MovieScrollDetail> {
                   )
                 ]),
                 const MovieDetailsWidget(),
+                const SizedBox(height: 5,),
+                ExpandableTextWidget(text: 'Escalating threats and a devastating loss lead the Lockes into a ferocious showdown with Dodge. Back at Keyhouse, Bode confronts a shocking visitor')
               ],
             ),
           ),
