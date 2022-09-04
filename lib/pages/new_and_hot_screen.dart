@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:netflix_clone/widgets/home_page_widget/shuffle_cast_user.dart';
 import 'package:netflix_clone/widgets/textWidget.dart';
 
-class NewAndHotScreen extends StatefulWidget {
-  static String id = 'new_and_hot_screen';
+import '../widgets/new_and_hot_widgets/new_and_hot_line.dart';
 
+class NewAndHotScreen extends StatefulWidget {
   const NewAndHotScreen({Key? key}) : super(key: key);
 
   @override
@@ -14,7 +15,29 @@ class _NewAndHotScreenState extends State<NewAndHotScreen> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Center(child: HeavyText(text: 'New and Hot', fontSize: 17,)),
+      margin: EdgeInsets.only(top: 40),
+      child: Column(
+        children: [
+          Container(
+            padding: EdgeInsets.symmetric(horizontal: 10),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: const [
+                DescriptionText(
+                  text: 'New & Hot',
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                  fontSize: 22,
+                ),
+                ShuffleCastUserWidget(),
+              ],
+            ),
+          ),
+          NewAndHotOptionsWidget(),
+        ],
+      ),
     );
   }
 }
+
+

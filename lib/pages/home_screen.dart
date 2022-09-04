@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../data/data.dart';
+import '../widgets/home_page_widget/shuffle_cast_user.dart';
 import '../widgets/iconwidget.dart';
 import '../widgets/home_page_widget//movies_scroll.dart';
 import '../widgets/textWidget.dart';
@@ -48,29 +49,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           scale: 40,
                         ),
                       ),
-                      Row(
-                        children: [
-                          IconWidget(
-                            padding: 10,
-                            icon: Icons.shuffle,
-                            size: 20,
-                            color: Colors.white,
-                          ),
-                          IconWidget(
-                            padding: 10,
-                            icon: Icons.cast_rounded,
-                            size: 20,
-                            color: Colors.white,
-                          ),
-                          Container(
-                            padding: const EdgeInsets.all(10),
-                            child: const Image(
-                                image: NetworkImage(
-                                    'https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png',
-                                    scale: 15)),
-                          )
-                        ],
-                      )
+                      const ShuffleCastUserWidget()
                     ],
                   ),
                 ),
@@ -148,3 +127,4 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 }
+

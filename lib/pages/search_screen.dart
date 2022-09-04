@@ -3,7 +3,7 @@ import 'package:netflix_clone/data/data.dart';
 import 'package:netflix_clone/widgets/textWidget.dart';
 
 import '../widgets/search_screen_widget/search_screen_list_tile.dart';
-import '../widgets/search_screen_widget/search_screen_widget.dart';
+import '../widgets/search_screen_widget/text_field_widget.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({Key? key}) : super(key: key);
@@ -14,6 +14,14 @@ class SearchScreen extends StatefulWidget {
 
 class _SearchScreenState extends State<SearchScreen> {
 
+  String searchQuery = "";
+
+  onChange(String data){
+    setState(() {
+      searchQuery= data;
+    });
+
+  }
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -23,7 +31,7 @@ class _SearchScreenState extends State<SearchScreen> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const TextFieldWidget(),
+          TextFieldWidget(onchange: onChange),
           const SizedBox(
             height: 10,
           ),
@@ -34,12 +42,15 @@ class _SearchScreenState extends State<SearchScreen> {
             fontWeight: FontWeight.bold,
           ),
           SearchList(
-            movies: getWatchItAgainData(),
+            movies: getWatchItAgainData(searchQuery),
           )
         ],
       ),
     );
   }
 }
+
+
+
 
 
