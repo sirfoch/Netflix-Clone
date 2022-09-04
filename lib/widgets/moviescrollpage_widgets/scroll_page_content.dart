@@ -8,31 +8,33 @@ class MovieDetailsWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.symmetric(
+      padding: const EdgeInsets.symmetric(
         vertical: 10,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
               Image.asset(
                 'assets/image/netflix.png',
                 scale: 70,
+
               ),
-              DescriptionText(
+              const DescriptionText(
                 text: 'SERIES',
                 letterSpacing: 3,
                 color: Colors.white,
                 fontSize: 9,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 7,
               ),
             ],
           ),
-          HeavyText(text: 'Locke & Key'),
-          SizedBox(
+          const HeavyText(text: 'Locke & Key'),
+          const SizedBox(
             height: 2,
           ),
           Row(
@@ -63,8 +65,8 @@ class MovieDetailsWidget extends StatelessWidget {
               ),
             ],
           ),
-          HeavyText(text: '#6 in TV Shows Today', fontSize: 17,),
-          SizedBox(
+          const HeavyText(text: '#6 in TV Shows Today', fontSize: 17,),
+          const SizedBox(
             height: 10,
           ),
           Container(
@@ -72,7 +74,7 @@ class MovieDetailsWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconWidget(icon: Icons.play_arrow, size: 25, padding: 1),
-                DescriptionText(text: 'Resume', color: Colors.black, fontWeight: FontWeight.bold,)
+                const DescriptionText(text: 'Resume', color: Colors.black, fontWeight: FontWeight.bold,)
               ],
             ),
             decoration: BoxDecoration(
@@ -81,13 +83,13 @@ class MovieDetailsWidget extends StatelessWidget {
             ),
             height: 30,
           ),
-          SizedBox(height:10,),
+          const SizedBox(height:10,),
           Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 IconWidget(icon: Icons.download, size: 25, padding: 1, color: Colors.white,),
-                DescriptionText(text: 'Download S2:E10', color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14,)
+                const DescriptionText(text: 'Download S2:E10', color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14,)
               ],
             ),
             decoration: BoxDecoration(
@@ -95,7 +97,9 @@ class MovieDetailsWidget extends StatelessWidget {
               borderRadius: BorderRadius.circular(5)
             ),
             height: 30,
-          )
+          ),
+          SizedBox(height: 10,),
+          const HeavyText(text: 'S2:E10 Cliffhanger'),
         ],
       ),
     );

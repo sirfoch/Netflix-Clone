@@ -3,13 +3,13 @@ import 'package:iconly/iconly.dart';
 import 'package:netflix_clone/data/data.dart';
 import 'package:netflix_clone/pages/download_screen.dart';
 import 'package:netflix_clone/pages/home_screen.dart';
-import 'package:netflix_clone/pages/movie_scroll_detail.dart';
+import 'package:netflix_clone/pages/movie_scroll_page.dart';
 import 'package:netflix_clone/pages/new_and_hot_screen.dart';
 import 'package:netflix_clone/pages/search_screen.dart';
 import 'package:netflix_clone/widgets/textWidget.dart';
 
 import '../widgets/iconwidget.dart';
-import '../widgets/movies_scroll.dart';
+import '../widgets/home_page_widget//movies_scroll.dart';
 
 class MoviesPage extends StatefulWidget {
   static String id = 'home_screen';

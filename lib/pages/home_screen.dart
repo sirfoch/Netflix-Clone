@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 
 import '../data/data.dart';
 import '../widgets/iconwidget.dart';
-import '../widgets/movies_scroll.dart';
+import '../widgets/home_page_widget//movies_scroll.dart';
 import '../widgets/textWidget.dart';
-import 'movie_scroll_detail.dart';
+import 'movie_scroll_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({Key? key}) : super(key: key);

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:netflix_clone/widgets/textWidget.dart';
 
 class IconWidget extends StatelessWidget {
@@ -50,6 +51,41 @@ class InfoAndListWidget extends StatelessWidget {
   }
 }
 
+class InfoAndListWidget2 extends StatelessWidget {
+  const InfoAndListWidget2({
+    Key? key,
+    required this.icon,
+    required this.text,
+    this.color,
+    required this.fontSize,
+  }) : super(key: key);
+
+  final IconData icon;
+  final String text;
+  final Color? color;
+  final double fontSize;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        Icon(
+          icon,
+          color: Colors.white,
+        ),
+        const SizedBox(
+          height: 10,
+        ),
+        DescriptionText(
+          text: text,
+          fontSize: fontSize,
+          color: color,
+        ),
+      ],
+    );
+  }
+}
+
 class PlayContainer extends StatelessWidget {
   const PlayContainer({Key? key}) : super(key: key);
 
@@ -60,7 +96,7 @@ class PlayContainer extends StatelessWidget {
       height: 25,
       width: 70,
       child: Row(
-        children: [
+        children: const [
           Icon(Icons.play_arrow),
           Text(
             'Play',
@@ -71,3 +107,49 @@ class PlayContainer extends StatelessWidget {
     );
   }
 }
+
+class ListRateShareWidget extends StatelessWidget {
+  const ListRateShareWidget({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        Container(
+          child: const Padding(
+            padding: EdgeInsets.all(8.0),
+            child: InfoAndListWidget2(
+              icon: Icons.done,
+              text: 'My List',
+              color: Colors.white38,
+              fontSize: 12,
+            ),
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          child: const InfoAndListWidget2(
+            icon: FontAwesomeIcons.thumbsUp,
+            text: 'Rate',
+            color: Colors.white38,
+            fontSize: 12,
+          ),
+        ),
+        Container(
+          padding: const EdgeInsets.symmetric(horizontal: 25.0),
+          child: const InfoAndListWidget2(
+            icon: FontAwesomeIcons.paperPlane,
+            text: 'Share',
+            color: Colors.white38,
+            fontSize: 12,
+          ),
+        ),
+      ],
+    );
+  }
+}
+
+

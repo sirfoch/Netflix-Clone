@@ -32,6 +32,7 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
   @override
   Widget build(BuildContext context) {
     return Container(
+      // alignment: Alignment.center,
       child: secondHalf == ''
           ? DescriptionText(text: widget.text, fontSize: 30,)
           : Column(
@@ -45,6 +46,7 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
               : DescriptionText(
             color: Colors.white,
             text: widget.text,
+            fontSize: 12,
           ),
           const SizedBox(height: 5),
           InkWell(
@@ -70,6 +72,8 @@ class _ExpandableTextWidgetState extends State<ExpandableTextWidget> {
                   const DescriptionText(
                     text: "Show less",
                     color: Colors.white,
+                    fontSize: 12,
+                    fontWeight:FontWeight.bold,
                   ),
                   const Icon(Icons.arrow_drop_up,
                       color: Colors.white,
