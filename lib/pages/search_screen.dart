@@ -16,9 +16,10 @@ class _SearchScreenState extends State<SearchScreen> {
 
   String searchQuery = "";
 
+  //this function captures what is typed into the textfield
   onChange(String data){
     setState(() {
-      searchQuery= data;
+      searchQuery = data;
     });
 
   }

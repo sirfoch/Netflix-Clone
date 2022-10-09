@@ -33,7 +33,7 @@ class _NewAndHotScreenState extends State<NewAndHotScreen> {
               ],
             ),
           ),
-          NewAndHotOptionsWidget(),
+          const NewAndHotOptionsWidget(),
         ],
       ),
     );

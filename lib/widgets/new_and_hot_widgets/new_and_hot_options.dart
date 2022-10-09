@@ -5,16 +5,15 @@ import '../textWidget.dart';
 class NHOptions extends StatelessWidget {
   final String text;
   final Function? onpressed;
-  const NHOptions({Key? key, required this.text, this.onpressed}) : super(key: key);
+  final BoxDecoration? decoration;
+  final Color color;
+  const NHOptions({Key? key, required this.text, this.onpressed, this.decoration, required this.color}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 25,
-      decoration: BoxDecoration(
-        color: Colors.white,
-        borderRadius: BorderRadius.circular(11),
-      ),
+      height: 30,
+      decoration: decoration,
       child: Center(
         child: Padding(
           padding: const EdgeInsets.symmetric(vertical: 2.0, horizontal: 12),
@@ -22,7 +21,7 @@ class NHOptions extends StatelessWidget {
             children: [
               DescriptionText(
                 text: text,
-                color: Colors.black,
+                color: color,
                 fontSize: 12,
                 fontWeight: FontWeight.bold,
               ),

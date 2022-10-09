@@ -11,14 +11,19 @@ class NewAndHotOptionsWidget extends StatefulWidget {
 
 class _NewAndHotOptionsWidgetState extends State<NewAndHotOptionsWidget> {
 
+  final BoxDecoration _decorationProp = BoxDecoration(
+    color: Colors.white,
+    borderRadius: BorderRadius.circular(11),
+  );
 
-  // toggleTap (current){
-  //
-  //   setState(() {
-  //     currentClick = current;
-  //   });
-  // }
+ String currentClick = 'comingSoon';
 
+  toggleTap (current){
+
+    setState(() {
+      currentClick = current;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,21 +33,48 @@ class _NewAndHotOptionsWidgetState extends State<NewAndHotOptionsWidget> {
         child: SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
-            children: const [
-              NHOptions(
-                text: '🍿 Coming soon',
+            children: [
+              InkWell(
+                onTap: (){
+                  setState(() {
+                    toggleTap('comingSoon');
+                  });
+                },
+                child: NHOptions(
+                  decoration: currentClick=='comingSoon'?_decorationProp:null,
+                  color: currentClick=='comingSoon'?Colors.black:Colors.white,
+                  text: '🍿 Coming soon',
+                ),
               ),
               SizedBox(
                 width: 10,
               ),
-              NHOptions(
-                text: '🔥 Everyone\'s Watching',
+              InkWell(
+                onTap: (){
+                  setState(() {
+                    toggleTap('everyone');
+                  });
+                },
+                child: NHOptions(
+                  decoration: currentClick=='everyone'?_decorationProp:null,
+                  color: currentClick=='everyone'?Colors.black:Colors.white,
+                  text: '🔥 Everyone\'s Watching',
+                ),
               ),
               SizedBox(
                 width: 10,
               ),
-              NHOptions(
-                text: '💯 Top Ten',
+              InkWell(
+                onTap: (){
+                  setState(() {
+                    toggleTap('topTen');
+                  });
+                },
+                child: NHOptions(
+                  decoration: currentClick=='topTen'?_decorationProp:null,
+                  color: currentClick=='topTen'?Colors.black:Colors.white,
+                  text: '💯 Top Ten',
+                ),
               ),
             ],
           ),

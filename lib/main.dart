@@ -1,8 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:netflix_clone/pages/download_screen.dart';
-import 'package:netflix_clone/pages/movies.dart';
-import 'package:netflix_clone/pages/new_and_hot_screen.dart';
-import 'package:netflix_clone/pages/search_screen.dart';
 import 'package:netflix_clone/pages/userspage.dart';
 
 void main() {

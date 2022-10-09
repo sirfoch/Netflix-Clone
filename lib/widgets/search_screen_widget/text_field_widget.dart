@@ -20,7 +20,7 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
         showCursor: true,
         style: const TextStyle(color: Colors.white, fontSize: 13),
         textAlign: TextAlign.start,
-        onChanged: (data)=>{
+        onChanged: (data) =>{
           widget.onchange(data)
         },
         decoration: InputDecoration(

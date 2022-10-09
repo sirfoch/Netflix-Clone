@@ -36,7 +36,7 @@ List<Map> getUserData() {
   return users;
 }
 
-List<Map> getWatchItAgainData([String searchQuery = ""]) {
+List<Map> getWatchItAgainData([String searchQuery='']) {
   List<Map> movies = [
     {
       "name": "Suit",
@@ -113,7 +113,7 @@ List<Map> getWatchItAgainData([String searchQuery = ""]) {
 
   List<Map> filter = [];
   filter.addAll(movies);
-
+  //
   filter.retainWhere((movie) {
     return movie["name"].contains(searchQuery);
   });
@@ -122,19 +122,21 @@ List<Map> getWatchItAgainData([String searchQuery = ""]) {
   if (filter.isEmpty) {
     filter.addAll(movies);
   }
-  //
 
+
+
+  // // Option 2
   // for (var i = 0; i < movies.length; i++) {
   //   if (movies[i]["name"]== searchQuery){
   //     filter.add(movies[i]);
   //   }
   // }
-  //
-  //
-  // if (filter.length == 0){
-  //   filter.addAll(movies);
-  // }
-  //
+
+
+  if (filter.length == 0){
+    filter.addAll(movies);
+  }
+
 
   return filter;
 }
